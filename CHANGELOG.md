@@ -1,0 +1,31 @@
+## 1.0.0
+
+### 🚀 Features
+
+- **🏗 Federated Architecture**: Refactored to a modern federated structure for robust cross-platform extensibility.
+- **🌐 Expanded Platform Support**:
+    - **Android & iOS**: Optimized native implementations for all permissions.
+    - **Web**: Initial support for core permissions using the Browser Permissions API.
+    - **macOS**: Full native support with parity to iOS.
+    - **Windows**: Infrastructure added for future expansion.
+- **📡 Real-time Updates**: Listen to permission status changes via `statusStream()`.
+- **📦 Batch Operations**: Check or request multiple permissions simultaneously with `checkMultiple()` and `requestMultiple()`.
+- **🤖 Specialized Android Permissions**:
+    - Battery Optimization bypass.
+    - System Alert Window (Overlay).
+    - Schedule Exact Alarms.
+- **🖼 Granular Media Support (Android 13+)**:
+    - `mediaImages`, `mediaVideo`, and `mediaAudio` support.
+
+### ✅ Supported Permissions
+
+- **General**: Camera, Microphone, Location (Always/InUse), Contacts, Phone, Notifications, Photos, Storage.
+- **Bluetooth**: `bluetooth`, `bluetoothScan`, `bluetoothConnect`, `bluetoothAdvertise`.
+- **Connectivity**: `nearbyDevices`.
+- **Productivity**: `calendar`.
+- **Messaging**: `sms`, `sendSms` (Android).
+- **Health**: `activityRecognition`.
+- **Media**: `accessMediaLocation`.
+
+### 📱 Supported Statuses
+- `granted`, `denied`, `permanentlyDenied` (Android), `restricted` (iOS/macOS), `limited` (iOS/macOS Photos).
