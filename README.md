@@ -8,7 +8,7 @@ This plugin helps you **check**, **request**, and **listen** to permission state
 
 | Android | iOS | Web | macOS | Windows | Linux |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| ✅ | ✅ | ✅ | ✅ | ✅ | 🚧 |
+| ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ## ✨ Features
 
@@ -18,6 +18,8 @@ This plugin helps you **check**, **request**, and **listen** to permission state
 - ⚡ **Real-time Updates**: Listen to permission status changes via a stream.
 - 🤖 **Android Specialized**: Support for Battery Optimization, Overlay, and Exact Alarms.
 - 🍏 **iOS Parity**: Handles restricted, limited, and not-determined states gracefully.
+- 📦 **SPM Support**: Fully compatible with Swift Package Manager for iOS and macOS.
+- 📚 **100% Documented**: Every public API element is fully documented with dartdoc comments.
 - 🛠 **Simple API**: Single unified class for all operations.
 
 ## 📦 Installation
@@ -26,7 +28,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  permission_manager: ^1.0.0
+  permission_manager: ^2.0.0
 ```
 
 ##  Usage

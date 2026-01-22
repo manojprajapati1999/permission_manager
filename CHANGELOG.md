@@ -1,3 +1,11 @@
+## 2.0.0
+
+- **🚀 Full Linux Support**: Added native implementation for Linux platform mapping, achieving parity across all 6 Flutter platforms.
+- **📦 Swift Package Manager (SPM) Support**: Integrated `Package.swift` for both iOS and macOS, enabling modern dependency management.
+- **📚 100% Documentation Coverage**: Added comprehensive dartdoc comments for all public API members (classes, methods, enums).
+- **🛠 Improved Code Quality**: Enabled `public_member_api_docs` lint and resolved all analysis warnings.
+- **🧪 Enhanced Testing**: Updated unit tests to support the expanded platform interface and verified functionality.
+
 ## 1.0.0
 
 ### 🚀 Features
