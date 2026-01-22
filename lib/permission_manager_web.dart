@@ -4,11 +4,12 @@ import 'dart:js_interop';
 import 'permission_manager_platform_interface.dart';
 import 'permission_manager_types.dart';
 
-/// A web implementation of the PermissionManagerPlatform of the PermissionManager plugin.
+/// The Web implementation of [PermissionManagerPlatform].
 class PermissionManagerWeb extends PermissionManagerPlatform {
   /// Constructs a PermissionManagerWeb.
   PermissionManagerWeb();
 
+  /// Registers this class as the default instance of [PermissionManagerPlatform].
   static void registerWith(Registrar registrar) {
     PermissionManagerPlatform.instance = PermissionManagerWeb();
   }

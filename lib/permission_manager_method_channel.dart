@@ -10,6 +10,7 @@ class MethodChannelPermissionManager extends PermissionManagerPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('permission_manager');
 
+  /// The event channel used to receive permission status updates.
   @visibleForTesting
   final eventChannel = const EventChannel('permission_manager_events');
 
@@ -70,7 +71,6 @@ class MethodChannelPermissionManager extends PermissionManagerPlatform {
           PermissionManagerStatus.values.byName(value),
         ));
   }
-
   @override
   Stream<PermissionManagerStatus> statusStream(
     PermissionManagerPermission permission,
