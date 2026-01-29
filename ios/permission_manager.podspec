@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'permission_manager'
-  s.version          = '2.0.3'
+  s.version          = '2.0.4'
   s.summary          = 'Flutter plugin to manage and request runtime permissions on Android and iOS.'
   s.description      = <<-DESC
 A Flutter plugin that simplifies permission handling on Android and iOS.
@@ -13,7 +13,7 @@ with proper platform-specific implementations.
   s.author           = { 'Manoj Patadiya' => 'manoj.patadiya@gmail.com' }
   s.source           = { :path => '.' }
 
-  s.source_files     = 'Classes/**/*.{h,m,swift}'
+  s.source_files     = 'permission_manager/Sources/permission_manager/**/*.{h,m,swift}'
   s.resource_bundles = {
     'permission_manager' => ['Assets/**/*', 'Resources/**/*']
   }
