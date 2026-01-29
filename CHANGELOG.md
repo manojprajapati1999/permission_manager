@@ -1,3 +1,10 @@
+## 2.0.3
+- Fixed Swift Package Manager (SPM) structure to align with Flutter official guidelines
+- Resolved conflict between CocoaPods (`.podspec`) and SwiftPM (`Package.swift`)
+- Moved Swift Package Manager configuration to root `.swiftpm/Package.swift`
+- Ensured iOS and macOS native source files are correctly scoped under `Classes/`
+- Improved compatibility with Xcode Swift Package Manager integration
+
 ## 2.0.2
 - 🐛 Fixed Swift Package Manager & CocoaPods conflict
 

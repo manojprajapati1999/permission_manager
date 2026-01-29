@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'permission_manager'
-  s.version          = '2.0.2'
+  s.version          = '2.0.3'
   s.summary          = 'Flutter plugin to manage and request runtime permissions on Android and iOS.'
   s.description      = <<-DESC
 A Flutter plugin that simplifies permission handling on Android and iOS.

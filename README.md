@@ -28,7 +28,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  permission_manager: ^2.0.2
+  permission_manager: ^2.0.3
 ```
 
 ##  Usage
