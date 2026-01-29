@@ -1,3 +1,9 @@
+## 2.0.2
+- 🐛 Fixed Swift Package Manager & CocoaPods conflict
+
+## 2.0.1
+- 🐛 Fixed Swift switch-case compilation error on iOS/macOS
+
 ## 2.0.0
 
 - **🚀 Full Linux Support**: Added native implementation for Linux platform mapping, achieving parity across all 6 Flutter platforms.

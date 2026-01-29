@@ -67,16 +67,33 @@ public class PermissionManagerPlugin: NSObject, FlutterPlugin, FlutterStreamHand
 
     let shouldRequest = call.method == "request"
 
-    case "camera", "microphone", "photos", "notifications", "contacts",
-         "bluetooth", "bluetoothScan", "bluetoothConnect", "bluetoothAdvertise",
+    switch permission {
+
+    case "camera",
+         "microphone",
+         "photos",
+         "notifications",
+         "contacts",
+         "bluetooth",
+         "bluetoothScan",
+         "bluetoothConnect",
+         "bluetoothAdvertise",
          "calendar":
+
         getStatus(permission, shouldRequest: shouldRequest) { status in
             self.eventSink?(status)
             result(status)
         }
-    case "ignoreBatteryOptimizations", "systemAlertWindow", "scheduleExactAlarm",
-         "nearbyDevices", "activityRecognition", "accessMediaLocation":
+
+    case "ignoreBatteryOptimizations",
+         "systemAlertWindow",
+         "scheduleExactAlarm",
+         "nearbyDevices",
+         "activityRecognition",
+         "accessMediaLocation":
+        // Not supported on macOS/iOS
         result("denied")
+
     default:
         result("denied")
     }
