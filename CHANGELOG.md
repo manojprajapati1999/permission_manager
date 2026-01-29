@@ -1,9 +1,36 @@
 ## 2.0.3
+
+### 🐛 Bug Fixes
+- Fixed critical iOS plugin syntax error (missing `switch` keyword) that prevented compilation
+- Fixed macOS permission denial issue where permissions were denied without showing system prompts
+
+### 📚 Documentation Improvements
+- Added comprehensive **macOS Setup** section with:
+  - Complete Info.plist usage descriptions guide
+  - Required App Sandbox entitlements configuration
+  - Troubleshooting guide for "denied without prompt" issues
+- Added **Windows Setup** section explaining OS-level permission handling
+- Added **Linux Setup** section with distribution-specific notes
+- Added **Web Setup** section with:
+  - HTTPS requirements and browser compatibility
+  - Supported permissions table
+  - Testing tips for localhost development
+- Enhanced iOS setup section with best practices and tips
+
+### 🔧 Example App Configuration
+- Added all required permission usage descriptions to macOS example app Info.plist
+- Added complete App Sandbox entitlements to macOS DebugProfile.entitlements
+- Added complete App Sandbox entitlements to macOS Release.entitlements
+- Ensured iOS example app has all permission descriptions
+
+### 🏗️ Swift Package Manager
 - Fixed Swift Package Manager (SPM) structure to align with Flutter official guidelines
 - Resolved conflict between CocoaPods (`.podspec`) and SwiftPM (`Package.swift`)
 - Moved Swift Package Manager configuration to root `.swiftpm/Package.swift`
 - Ensured iOS and macOS native source files are correctly scoped under `Classes/`
 - Improved compatibility with Xcode Swift Package Manager integration
+
+> **Note for macOS Users**: If you're experiencing permission denials without prompts on macOS 14.7.5+, make sure to add the required Info.plist usage descriptions and App Sandbox entitlements as documented in the README.
 
 ## 2.0.2
 - 🐛 Fixed Swift Package Manager & CocoaPods conflict

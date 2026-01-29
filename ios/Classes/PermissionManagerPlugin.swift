@@ -71,6 +71,7 @@ public class PermissionManagerPlugin: NSObject, FlutterPlugin, FlutterStreamHand
 
     let shouldRequest = call.method == "request"
 
+    switch permission {
     case "camera", "microphone", "photos", "notifications", "contacts",
          "bluetooth", "bluetoothScan", "bluetoothConnect", "bluetoothAdvertise",
          "calendar", "activityRecognition":

@@ -156,6 +156,137 @@ Add usage descriptions to your `Info.plist`:
 <string>Activity recognition is required</string>
 ```
 
+> [!TIP]
+> Customize these descriptions to explain why your specific app needs each permission. Clear, user-friendly descriptions improve permission grant rates.
+
+---
+
+## 🖥 macOS Setup
+
+macOS requires both **Info.plist usage descriptions** and **App Sandbox entitlements** for permissions to work correctly.
+
+### Info.plist Usage Descriptions
+
+Add the same usage descriptions as iOS to your `macos/Runner/Info.plist`:
+
+```xml
+<key>NSCameraUsageDescription</key>
+<string>Camera access is required</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>Microphone access is required</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Photo library access is required</string>
+<key>NSContactsUsageDescription</key>
+<string>Contacts access is required</string>
+<key>NSCalendarsUsageDescription</key>
+<string>Calendar access is required</string>
+<key>NSBluetoothAlwaysUsageDescription</key>
+<string>Bluetooth access is required</string>
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Location access is required</string>
+<key>NSLocationAlwaysUsageDescription</key>
+<string>Background location access is required</string>
+<key>NSMotionUsageDescription</key>
+<string>Activity recognition is required</string>
+```
+
+### App Sandbox Entitlements
+
+Add required entitlements to **both** `macos/Runner/DebugProfile.entitlements` and `macos/Runner/Release.entitlements`:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+	
+	<!-- Device Access -->
+	<key>com.apple.security.device.camera</key>
+	<true/>
+	<key>com.apple.security.device.audio-input</key>
+	<true/>
+	
+	<!-- Personal Information -->
+	<key>com.apple.security.personal-information.photos-library</key>
+	<true/>
+	<key>com.apple.security.personal-information.addressbook</key>
+	<true/>
+	<key>com.apple.security.personal-information.calendars</key>
+	<true/>
+	<key>com.apple.security.personal-information.location</key>
+	<true/>
+	
+	<!-- File Access (if needed) -->
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+	
+	<!-- Network (usually needed for Flutter apps) -->
+	<key>com.apple.security.network.client</key>
+	<true/>
+</dict>
+</plist>
+```
+
+> [!WARNING]
+> **Missing entitlements or Info.plist keys will cause permissions to be denied silently without showing any prompt to the user.** This is the most common issue on macOS 14.7.5+.
+
+### Troubleshooting macOS Permissions
+
+If permissions are always denied without prompts:
+
+1. ✅ Verify all required `NSxxxUsageDescription` keys are in `Info.plist`
+2. ✅ Verify all required entitlements are in **both** `.entitlements` files
+3. ✅ Clean build folder: `flutter clean` then rebuild
+4. ✅ Reset permissions: `tccutil reset All com.your.bundle.identifier`
+5. ✅ Check Console.app for permission-related errors
+
+---
+
+## 🪟 Windows Setup
+
+Windows doesn't require manifest changes for most permissions. The plugin handles permissions at the OS level.
+
+> [!NOTE]
+> Some permissions (like camera/microphone) may require user consent through Windows Settings. The plugin will guide users to the appropriate settings page when needed.
+
+---
+
+## 🐧 Linux Setup
+
+Linux permissions are typically handled at the OS level through system policies.
+
+> [!NOTE]
+> Depending on your Linux distribution and desktop environment, you may need to configure permissions through system settings or PolicyKit rules.
+
+---
+
+## 🌐 Web Setup
+
+Web permissions use the browser's native Permissions API and are requested automatically.
+
+### Requirements
+
+- **HTTPS Required**: Most permissions (camera, microphone, location) require a secure context (HTTPS)
+- **User Gesture**: Some permissions must be requested in response to user interaction
+
+### Supported Permissions on Web
+
+| Permission | Support | Notes |
+|:---|:---:|:---|
+| Camera | ✅ | Requires HTTPS |
+| Microphone | ✅ | Requires HTTPS |
+| Location | ✅ | Requires HTTPS |
+| Notifications | ✅ | Works on HTTP |
+| Bluetooth | ⚠️ | Limited browser support |
+| Others | ❌ | Not available in browsers |
+
+> [!TIP]
+> Test web permissions on `localhost` (allowed without HTTPS) or deploy to a secure HTTPS server.
+
+---
+
 ## 📝 License
 This package is available under the MIT License.
 
