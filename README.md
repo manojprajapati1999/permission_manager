@@ -28,7 +28,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  permission_manager: ^2.0.4
+  permission_manager: ^2.0.5
 ```
 
 ##  Usage
@@ -136,6 +136,8 @@ Add required permissions to your `AndroidManifest.xml`:
 ```
 
 ## 🍎 iOS Setup
+
+**Minimum iOS Version: 13.0**
 
 Add usage descriptions to your `Info.plist`:
 

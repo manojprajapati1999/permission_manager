@@ -10,7 +10,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "permission_manager",
+            name: "permission-manager",
             targets: ["permission_manager"]
         )
     ],

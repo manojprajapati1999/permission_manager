@@ -1,3 +1,9 @@
+## 2.0.5
+
+### 🐛 Bug Fixes
+- Fixed Swift Package Manager (SPM) product name mismatch (`permission_manager` -> `permission-manager`)
+- Fixed iOS build error caused by `CBCentralManager.authorization` requirement (Bumped minimum iOS version to 13.0)
+
 ## 2.0.4
 
 ### 🐛 Bug Fixes
