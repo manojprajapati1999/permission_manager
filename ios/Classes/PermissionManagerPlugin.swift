@@ -201,12 +201,16 @@ public class PermissionManagerPlugin: NSObject, FlutterPlugin, FlutterStreamHand
               }
           }
       case "bluetooth", "bluetoothScan", "bluetoothConnect", "bluetoothAdvertise":
-          let status = CBCentralManager.authorization
-          if status == .notDetermined && shouldRequest {
-              // Triggering picker or just returning denied for now as CBCentralManager needs an instance to request
-              completion("denied") 
+          if #available(iOS 13.1, *) {
+            let status = CBCentralManager.authorization
+            if status == .notDetermined && shouldRequest {
+                // Triggering picker or just returning denied for now as CBCentralManager needs an instance to request
+                completion("denied") 
+            } else {
+                completion(status == .allowedAlways ? "granted" : "denied")
+            }
           } else {
-              completion(status == .allowedAlways ? "granted" : "denied")
+              completion("denied")
           }
       case "calendar":
           let status = EKEventStore.authorizationStatus(for: .event)
