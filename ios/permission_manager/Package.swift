@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "permission_manager",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v13_1)
     ],
     products: [
         .library(

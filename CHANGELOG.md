@@ -1,3 +1,8 @@
+## 2.0.6
+
+### 🚀 Improvements
+- Bumped minimum iOS version to 13.1
+
 ## 2.0.5
 
 ### 🐛 Bug Fixes
