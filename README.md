@@ -12,9 +12,9 @@ This plugin helps you **check**, **request**, and **listen** to permission state
 
 ## ✨ Permission Request Screen
 
-![Permission Manager](images/Banner.png)
+![Permission Manager](https://raw.githubusercontent.com/manojprajapati1999/permission_manager/main/images/Banner.png)
 
-![Notification Permission Dialog](images/notification.png) ![Photo / Video Permission Dialog](images/photo_video.png)
+![Permission Manager](https://raw.githubusercontent.com/manojprajapati1999/permission_manager/main/images/notification.png) ![Permission Manager](https://raw.githubusercontent.com/manojprajapati1999/permission_manager/main/images/photo_video.png)
 
 ## ✨ Features
 
@@ -34,7 +34,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  permission_manager: ^2.0.7
+  permission_manager: ^2.0.8
 ```
 
 ##  Usage
