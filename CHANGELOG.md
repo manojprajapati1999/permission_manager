@@ -1,3 +1,8 @@
+## 2.0.9
+
+### 📚 Documentation Improvements
+- Updated README.md
+
 ## 2.0.8
 
 ### 📚 Documentation Improvements

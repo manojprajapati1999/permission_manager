@@ -1,4 +1,4 @@
-# 🚀 permission_manager
+![Permission Manager](https://raw.githubusercontent.com/manojprajapati1999/permission_manager/main/images/Banner.png)
 
 A modern, **federated** Flutter plugin to manage app permissions across all platforms with a simple, unified API.
 
@@ -9,12 +9,6 @@ This plugin helps you **check**, **request**, and **listen** to permission state
 | Android | iOS | Web | macOS | Windows | Linux |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-
-## ✨ Permission Request Screen
-
-![Permission Manager](https://raw.githubusercontent.com/manojprajapati1999/permission_manager/main/images/Banner.png)
-
-![Permission Manager](https://raw.githubusercontent.com/manojprajapati1999/permission_manager/main/images/notification.png) ![Permission Manager](https://raw.githubusercontent.com/manojprajapati1999/permission_manager/main/images/photo_video.png)
 
 ## ✨ Features
 
@@ -34,7 +28,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  permission_manager: ^2.0.8
+  permission_manager: ^2.0.9
 ```
 
 ##  Usage
